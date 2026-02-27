@@ -24,7 +24,7 @@ const onsubmit = async (data) => {
             const data = response.data;
             localStorage.setItem('token',data.token)
             toast.success('Login Successfully!')
-            navigate('/app')
+            navigate('/dashboard')
         }
     }
 
