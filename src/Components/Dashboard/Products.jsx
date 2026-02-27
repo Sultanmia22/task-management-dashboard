@@ -20,7 +20,7 @@ const Products = () => {
                 <span className=''><FaCaretUp size={10} /></span>
             </div>
 
-            <p className='text-[10px] font-semibold'>Increased of the last month</p>
+            <p className='text-[11px] font-semibold'>Increased of the last month</p>
         </div>
     </div>
   )

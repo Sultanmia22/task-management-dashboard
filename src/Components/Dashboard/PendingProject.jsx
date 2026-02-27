@@ -15,7 +15,7 @@ const PendingProject = () => {
                                 </div>
                         
                                 <div className='text-green-700 flex items-center gap-2'>                        
-                                    <p className='text-[10px] font-semibold'>On Discuss</p>
+                                    <p className='text-[11px] font-semibold'>On Discuss</p>
                                 </div>
                 </div>
     </div>
