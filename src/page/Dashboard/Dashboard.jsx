@@ -9,6 +9,7 @@ import PendingProject from '../../Components/Dashboard/PendingProject'
 import ProjectAnalytics from '../../Components/Dashboard/ProjectAnalytics'
 import Reminder from '../../Components/Dashboard/Reminder'
 import AllProducts from '../../Components/Dashboard/AllProducts'
+import Teamcollaboration from '../../Components/Dashboard/Teamcollaboration'
 
 const Dashboard = () => {
 
@@ -55,24 +56,26 @@ const Dashboard = () => {
 
        
 
-        <div className="bg-white p-4 rounded-xl lg:col-span-2 row-span-2">
+        <div className="bg-white p-4 rounded-xl md::col-span-3 xl:col-span-2 md::row-span-3 xl:row-span-2">
           <ProjectAnalytics/>
         </div>
 
-        <div className="bg-white p-4 rounded-xl lg:row-span-2">
+        <div className="bg-white p-4 rounded-xl xl:row-span-2">
           <Reminder/>
         </div>
 
-        <div className="bg-white p-4 rounded-xl lg:row-span-3">
+        <div className="bg-white p-4 rounded-xl xl:row-span-3">
           <AllProducts/>
         </div>
        
 
-        <div className="border-2 border-red-500 p-4 rounded-xl lg:col-span-2 row-span-2">Team Collaboration</div>
+        <div className="bg-white p-4 rounded-xl xl:col-span-2 row-span-2">
+          <Teamcollaboration/>
+        </div>
 
-        <div className="border-2 border-red-500 p-4 rounded-xl lg:row-span-2">Project Progress</div>
+        <div className="border-2 border-red-500 p-4 rounded-xl xl:row-span-2">Project Progress</div>
 
-        <div className="border-2 border-red-500 p-4 rounded-xl">Time Tracker</div>
+        <div className="bg-white p-4 rounded-xl">Time Tracker</div>
 
 
 

@@ -16,7 +16,7 @@ const Reminder = () => {
                                        </div>
                                
                                        <div className=' flex items-center justify-center gap-2'>                        
-                                           <button className='flex items-center justify-center w-full  py-2 rounded-full gap-2 text-white bg-linear-to-t from-green-800 to-green-950 text-sm'> <span><BiVideoRecording size={20}/></span> Start Meeting</button>
+                                           <button className='flex items-center justify-center w-full  py-2 rounded-full gap-2 text-white bg-linear-to-t from-green-800 to-green-950 text-sm mt-5'> <span><BiVideoRecording size={20}/></span> Start Meeting</button>
                                        </div>
                  </div>
     </div>
