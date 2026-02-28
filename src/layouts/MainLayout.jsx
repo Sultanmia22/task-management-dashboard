@@ -10,7 +10,7 @@ const MainLayout = () => {
  
 
   return (
-    <div>
+    <div className='min-h-screen'>
 
     {
       isOpenSlider && 
@@ -24,12 +24,12 @@ const MainLayout = () => {
       <div className="grid xl:grid-cols-12 min-h-screen gap-5 p-5">
 
         {/* Sidebar */}
-        <div className="hidden xl:block col-span-3 w-full min-h-screen">
+        <div className="hidden xl:block col-span-2 w-full min-h-screen">
           <DashboardSidebar />
         </div>
 
         {/* Main content */}
-        <div className="col-span-12 xl:col-span-9 w-full">
+        <div className="col-span-12 xl:col-span-10 w-full">
           <Outlet />
         </div>
 

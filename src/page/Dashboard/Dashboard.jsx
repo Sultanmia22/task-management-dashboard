@@ -10,78 +10,97 @@ import ProjectAnalytics from '../../Components/Dashboard/ProjectAnalytics'
 import Reminder from '../../Components/Dashboard/Reminder'
 import AllProducts from '../../Components/Dashboard/AllProducts'
 import Teamcollaboration from '../../Components/Dashboard/Teamcollaboration'
+import TimeTracker from '../../Components/Dashboard/TimeTracker'
+import ProductProgess from '../../Components/Dashboard/ProductProgess'
 
 const Dashboard = () => {
 
- const {setIsOpenSlider,isOpenSlider} = use(GlovalContext)
+  const { setIsOpenSlider, isOpenSlider } = use(GlovalContext)
 
- const handleOpenSlider = () => {
-  setIsOpenSlider(!isOpenSlider)
- }
+  const handleOpenSlider = () => {
+    setIsOpenSlider(!isOpenSlider)
+  }
 
   return (
     <div>
-       <div className="bg-gray-100 min-h-screen p-6 flex flex-col gap-5">
+      <div className=" min-h-screen flex flex-col gap-5">
 
-          <div className='border-2 border-red-500 p-5 flex justify-between'>
+        <div className='border-2 border-red-500 p-5 flex justify-between'>
           <button>
             Dahsboard
           </button>
 
-            <button onClick={handleOpenSlider}>
-              <FaBarsStaggered />
-            </button>
+          <button onClick={handleOpenSlider}>
+            <FaBarsStaggered />
+          </button>
         </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
+        <div className='bg-gray-100 p-6 rounded-2xl'>
+          <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-5 md:gap-0 mb-5'>
+            <div>
+              <h2 className='text-2xl font-bold text-gray-800'>Dashboard</h2>
+              <p className='text-gray-400'>lan, prioritize, and accomplish your tasks with ease.</p>
+            </div>
+            <div className='flex items-center gap-4'>
+              <button className='px-4 py-2 rounded-full gap-2 text-white bg-linear-to-t from-green-800 to-green-950 text-sm'>Add Project</button>
+              <button className='px-2 py-1 md:px-4 md:py-2 border-2 border-green-800 rounded-full'>Import Data</button>
+            </div>
+          </div>
+          <div className=" grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
 
 
-        <div className=" p-4 rounded-xl bg-linear-to-br from-emerald-900 to-green-600">
-          <Products/>
+            <div className=" p-4 rounded-xl bg-linear-to-br from-emerald-900 to-green-600">
+              <Products />
+            </div>
+
+            <div className="bg-white p-4 rounded-xl">
+              <EndedProject />
+            </div>
+
+            <div className="bg-white p-4 rounded-xl">
+              <RunningProject />
+            </div>
+
+            <div className="bg-white p-4 rounded-xl">
+              <PendingProject />
+            </div>
+
+
+
+
+
+            <div className="bg-white p-4 rounded-xl md:col-span-3 xl:col-span-2 md:row-span-3 xl:row-span-2">
+              <ProjectAnalytics />
+            </div>
+
+            <div className="bg-white p-4 rounded-xl xl:row-span-2">
+              <Reminder />
+            </div>
+
+            <div className="bg-white p-4 rounded-xl xl:row-span-3">
+              <AllProducts />
+            </div>
+
+
+            <div className="bg-white p-4 rounded-xl xl:col-span-2 row-span-2">
+              <Teamcollaboration />
+            </div>
+
+            <div className="bg-white p-4 rounded-xl xl:row-span-2">
+              <ProductProgess/>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#0b3d2e] to-[#0f2e26] p-4 rounded-xl">
+              <TimeTracker/>
+            </div>
+
+
+
+          </div>
         </div>
-
-        <div className="bg-white p-4 rounded-xl">
-          <EndedProject/>
-        </div>
-
-        <div className="bg-white p-4 rounded-xl">
-          <RunningProject/>
-        </div>
-
-        <div className="bg-white p-4 rounded-xl">
-          <PendingProject/>
-        </div>
-
-
-
-       
-
-        <div className="bg-white p-4 rounded-xl md::col-span-3 xl:col-span-2 md::row-span-3 xl:row-span-2">
-          <ProjectAnalytics/>
-        </div>
-
-        <div className="bg-white p-4 rounded-xl xl:row-span-2">
-          <Reminder/>
-        </div>
-
-        <div className="bg-white p-4 rounded-xl xl:row-span-3">
-          <AllProducts/>
-        </div>
-       
-
-        <div className="bg-white p-4 rounded-xl xl:col-span-2 row-span-2">
-          <Teamcollaboration/>
-        </div>
-
-        <div className="border-2 border-red-500 p-4 rounded-xl xl:row-span-2">Project Progress</div>
-
-        <div className="bg-white p-4 rounded-xl">Time Tracker</div>
-
 
 
       </div>
-
-  </div>
     </div>
   )
 }

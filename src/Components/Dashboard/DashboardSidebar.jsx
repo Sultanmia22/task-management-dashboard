@@ -8,8 +8,8 @@ import { Link, NavLink } from 'react-router'
 import logoIcon from '../../assets/drooble.svg'
 const DashboardSidebar = () => {
   return (
-    <div className=''>
-      <div className=' flex flex-col bg-gray-100 p-5 min-h-screen rounded-2xl'>
+    <div className='h-full'>
+      <div className=' bg-gray-100 p-5 min-h-screen rounded-2xl'>
 
         <div className='flex items-center gap-2'>
           <img src={logoIcon} alt="" className='text-green-800'/>

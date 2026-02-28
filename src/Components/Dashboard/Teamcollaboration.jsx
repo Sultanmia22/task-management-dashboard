@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router'
 const getUser = async () => {
     try {
         const res = await fetch(`https://task-api-eight-flax.vercel.app/api/users`)
@@ -31,9 +32,11 @@ const Teamcollaboration = () => {
 
     return (
         <div>
-            <h2 className='font-bold'>Team Collaboration</h2>
-
-            <div className='grid grid-cols-1'>
+           <div className='flex justify-between items-center mb-5'>
+             <p className='font-bold'>Team Collaboration</p>
+            <Link className='text-sm border-2 border-green-800 px-3 py-1 font-bold rounded-full'>+ Add Member</Link>
+           </div>
+            <div className='grid grid-cols-1 gap-2'>
                 {
                     users.map((user, index) =>
                         <div key={index} className='flex justify-between gap-2'>
@@ -51,7 +54,7 @@ const Teamcollaboration = () => {
 
                             <div>
                                 <button
-                                    className={`flex items-center gap-2 px-3 py-1 rounded-full text-sm ${user.status === "active"
+                                    className={`flex items-center gap-2 px-3 py-1 rounded-full text-[12px] ${user.status === "active"
                                             ? "bg-green-100 text-green-700"
                                             : "bg-amber-100 text-amber-700"
                                         }`}
@@ -65,7 +68,7 @@ const Teamcollaboration = () => {
                                     {user?.status}
                                 </button>
 
-                                <p className="text-sm text-gray-400">
+                                <p className="text-[12px] text-gray-400">
                                     {user?.joinDate}
                                 </p>
                             </div>
