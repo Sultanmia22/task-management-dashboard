@@ -6,13 +6,15 @@ import { MdDashboard, MdOutlineTask } from 'react-icons/md'
 import { TbBrandGoogleAnalytics, TbLogout } from 'react-icons/tb'
 import { Link, NavLink } from 'react-router'
 import logoIcon from '../../assets/drooble.svg'
+import { BiAward } from 'react-icons/bi'
+import { FaAward } from 'react-icons/fa6'
 const DashboardSidebar = () => {
   return (
     <div className='h-full'>
       <div className=' bg-gray-100 p-5 min-h-screen rounded-2xl'>
 
         <div className='flex items-center gap-2'>
-          <img src={logoIcon} alt="" className='text-green-800'/>
+          <img src={logoIcon} alt="" className='text-green-800' />
           <h2 className='text-2xl font-bold'>Donezo</h2>
         </div>
 
@@ -34,8 +36,8 @@ const DashboardSidebar = () => {
                   {/* Text */}
                   <span
                     className={`transition-all ${isActive
-                        ? "text-black font-bold"
-                        : "text-gray-500"
+                      ? "text-black font-bold"
+                      : "text-gray-500"
                       }`}
                   >
                     Dashboard
@@ -46,7 +48,7 @@ const DashboardSidebar = () => {
             </NavLink>
 
 
-             <NavLink  to={'/task'}>
+            <NavLink to={'/task'}>
               {({ isActive }) => (
                 <div className="flex items-center gap-2">
 
@@ -59,8 +61,8 @@ const DashboardSidebar = () => {
                   {/* Text */}
                   <span
                     className={`transition-all ${isActive
-                        ? "text-black font-bold"
-                        : "text-gray-500"
+                      ? "text-black font-bold"
+                      : "text-gray-500"
                       }`}
                   >
                     Task
@@ -71,8 +73,8 @@ const DashboardSidebar = () => {
             </NavLink>
 
 
-          
-          <NavLink to="/calendar">
+
+            <NavLink to="/calendar">
               {({ isActive }) => (
                 <div className="flex items-center gap-2">
 
@@ -85,8 +87,8 @@ const DashboardSidebar = () => {
                   {/* Text */}
                   <span
                     className={`transition-all ${isActive
-                        ? "text-black font-bold"
-                        : "text-gray-500"
+                      ? "text-black font-bold"
+                      : "text-gray-500"
                       }`}
                   >
                     Calendar
@@ -97,8 +99,8 @@ const DashboardSidebar = () => {
             </NavLink>
 
 
-          
-          <NavLink to="/analytics">
+
+            <NavLink to="/analytics">
               {({ isActive }) => (
                 <div className="flex items-center gap-2">
 
@@ -111,8 +113,8 @@ const DashboardSidebar = () => {
                   {/* Text */}
                   <span
                     className={`transition-all ${isActive
-                        ? "text-black font-bold"
-                        : "text-gray-500"
+                      ? "text-black font-bold"
+                      : "text-gray-500"
                       }`}
                   >
                     Analytics
@@ -136,8 +138,8 @@ const DashboardSidebar = () => {
                   {/* Text */}
                   <span
                     className={`transition-all ${isActive
-                        ? "text-black font-bold"
-                        : "text-gray-500"
+                      ? "text-black font-bold"
+                      : "text-gray-500"
                       }`}
                   >
                     Team
@@ -152,7 +154,7 @@ const DashboardSidebar = () => {
         </div>
 
         <div>
-          
+
           <div className='flex flex-col gap-4'>
             <p className='text-gray-400'>GENERAL</p>
 
@@ -169,8 +171,8 @@ const DashboardSidebar = () => {
                   {/* Text */}
                   <span
                     className={`transition-all ${isActive
-                        ? "text-black font-bold"
-                        : "text-gray-500"
+                      ? "text-black font-bold"
+                      : "text-gray-500"
                       }`}
                   >
                     Settings
@@ -179,9 +181,9 @@ const DashboardSidebar = () => {
                 </div>
               )}
             </NavLink>
-            
 
-             <NavLink to="/help">
+
+            <NavLink to="/help">
               {({ isActive }) => (
                 <div className="flex items-center gap-2">
 
@@ -194,8 +196,8 @@ const DashboardSidebar = () => {
                   {/* Text */}
                   <span
                     className={`transition-all ${isActive
-                        ? "text-black font-bold"
-                        : "text-gray-500"
+                      ? "text-black font-bold"
+                      : "text-gray-500"
                       }`}
                   >
                     Help
@@ -206,7 +208,7 @@ const DashboardSidebar = () => {
             </NavLink>
 
 
-             <NavLink to="/help">
+            <NavLink to="/help">
               {({ isActive }) => (
                 <div className="flex items-center gap-2">
 
@@ -219,8 +221,8 @@ const DashboardSidebar = () => {
                   {/* Text */}
                   <span
                     className={`transition-all ${isActive
-                        ? "text-black font-bold"
-                        : "text-gray-500"
+                      ? "text-black font-bold"
+                      : "text-gray-500"
                       }`}
                   >
                     Logout
@@ -231,6 +233,23 @@ const DashboardSidebar = () => {
             </NavLink>
           </div>
         </div>
+
+        <div className='bg-green-900 p-5 space-y-4 rounded-xl mt-5'>
+          <div className='bg-white w-5 h-5 rounded-full flex items-center justify-center'>
+            <FaAward className='text-gray-800' size={16} />
+          </div>
+
+          <div className='text-white'>
+            <h2 className='font-bold'>Download Our Mobile App</h2>
+            <p className='text-sm'>Get easy and another way</p>
+          </div>
+
+          <div className='flex justify-center '>
+            <button className='bg-green-950 text-white font-bold text-center py-2 px-4 rounded-full'>Download</button>
+          </div>
+        </div>
+
+
       </div>
     </div>
   )

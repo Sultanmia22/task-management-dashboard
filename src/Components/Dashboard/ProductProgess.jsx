@@ -51,7 +51,7 @@ const ProductProgess = () => {
   return (
     <div className=" rounded-2xl">
       <h2 className="text-base sm:text-lg font-semibold mb-4">
-        Project Progress
+        Products Progress
       </h2>
 
       <div className="relative w-full h-48 sm:h-60">
@@ -77,7 +77,7 @@ const ProductProgess = () => {
             {percentage}%
           </h1>
           <p className="text-green-700 text-xs sm:text-sm">
-            Project Ended
+            Product Ended
           </p>
         </div>
       </div>

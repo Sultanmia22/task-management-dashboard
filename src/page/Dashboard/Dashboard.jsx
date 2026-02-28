@@ -46,55 +46,47 @@ const Dashboard = () => {
               <button className='px-2 py-1 md:px-4 md:py-2 border-2 border-green-800 rounded-full'>Import Data</button>
             </div>
           </div>
-          <div className=" grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 w-full">
 
-
-            <div className=" p-4 rounded-xl bg-linear-to-br from-emerald-900 to-green-600">
+            <div className="p-4 rounded-xl bg-gradient-to-br from-emerald-900 to-green-600 shadow-sm">
               <Products />
             </div>
 
-            <div className="bg-white p-4 rounded-xl">
+            <div className="bg-white p-4 rounded-xl shadow-sm">
               <EndedProject />
             </div>
 
-            <div className="bg-white p-4 rounded-xl">
+            <div className="bg-white p-4 rounded-xl shadow-sm">
               <RunningProject />
             </div>
 
-            <div className="bg-white p-4 rounded-xl">
+            <div className="bg-white p-4 rounded-xl shadow-sm">
               <PendingProject />
             </div>
 
-
-
-
-
-            <div className="bg-white p-4 rounded-xl md:col-span-3 xl:col-span-2 md:row-span-3 xl:row-span-2">
+            <div className="bg-white p-4 rounded-xl md:col-span-2 xl:col-span-2 xl:row-span-2 shadow-sm">
               <ProjectAnalytics />
             </div>
 
-            <div className="bg-white p-4 rounded-xl xl:row-span-2">
+            <div className="bg-white p-4 rounded-xl md:col-span-1 xl:col-span-1 xl:row-span-2 shadow-sm">
               <Reminder />
             </div>
 
-            <div className="bg-white p-4 rounded-xl xl:row-span-3">
+            <div className="bg-white p-4 rounded-xl md:col-span-1 xl:col-span-1 xl:row-span-3 shadow-sm">
               <AllProducts />
             </div>
 
-
-            <div className="bg-white p-4 rounded-xl xl:col-span-2 row-span-2">
+            <div className="bg-white p-4 rounded-xl md:col-span-2 xl:col-span-2 xl:row-span-2 shadow-sm">
               <Teamcollaboration />
             </div>
 
-            <div className="bg-white p-4 rounded-xl xl:row-span-2">
-              <ProductProgess/>
+            <div className="bg-white p-4 rounded-xl md:col-span-1 xl:col-span-1 xl:row-span-2 shadow-sm">
+              <ProductProgess />
             </div>
 
-            <div className="bg-gradient-to-br from-[#0b3d2e] to-[#0f2e26] p-4 rounded-xl">
-              <TimeTracker/>
+            <div className="bg-gradient-to-br from-[#0b3d2e] to-[#0f2e26] p-4 rounded-xl shadow-sm text-white">
+              <TimeTracker />
             </div>
-
-
 
           </div>
         </div>

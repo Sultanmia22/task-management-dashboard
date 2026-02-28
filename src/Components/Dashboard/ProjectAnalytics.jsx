@@ -32,8 +32,8 @@ const ProjectAnalytics = () => {
   const maxViews = Math.max(...formattedData.map((d) => d.views));
 
   return (
-    <div className=" w-full h-60">
-      <h2 className="text-lg font-semibold 5">Project Analytics</h2>
+    <div className=" w-full  h-50">
+      <h2 className="text-lg font-semibold ">Project Analytics</h2>
 
       <ResponsiveContainer width="100%" height="80%">
         <BarChart data={formattedData}>
