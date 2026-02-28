@@ -7,6 +7,8 @@ import EndedProject from '../../Components/Dashboard/EndedProject'
 import RunningProject from '../../Components/Dashboard/RunningProject'
 import PendingProject from '../../Components/Dashboard/PendingProject'
 import ProjectAnalytics from '../../Components/Dashboard/ProjectAnalytics'
+import Reminder from '../../Components/Dashboard/Reminder'
+import AllProducts from '../../Components/Dashboard/AllProducts'
 
 const Dashboard = () => {
 
@@ -57,9 +59,13 @@ const Dashboard = () => {
           <ProjectAnalytics/>
         </div>
 
-        <div className="border-2 border-red-500 p-4 rounded-xl lg:row-span-2">Reminder</div>
+        <div className="bg-white p-4 rounded-xl lg:row-span-2">
+          <Reminder/>
+        </div>
 
-        <div className="border-2 border-red-500 p-4 rounded-xl lg:row-span-3">Project</div>
+        <div className="bg-white p-4 rounded-xl lg:row-span-3">
+          <AllProducts/>
+        </div>
        
 
         <div className="border-2 border-red-500 p-4 rounded-xl lg:col-span-2 row-span-2">Team Collaboration</div>

@@ -13,7 +13,7 @@ const Analytics = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await getAnalyticsData();
+            const data = await getAnalyticsData();
                 setAnalyticsData(data);
             } catch (err) {
                 console.error(err);
@@ -30,12 +30,12 @@ const Analytics = () => {
     const maxViews = Math.max(...analyticsData.map(item => item.views));
 
     return (
-        <div className="p-4 rounded-2xl">
-            <h2 className="text-xl font-bold mb-6">Project Analytics</h2>
+        <div className="rounded-2xl">
+            <h2 className="font-bold mb-6">Products Analytics</h2>
 
             <div className="grid grid-cols-5 items-end gap-6">
                 {analyticsData.map((item, index) => {
-                    const height = (item.views / maxViews) *120;
+                    const height = (item.views / maxViews) *100;
                     return (
                         <div key={index} className="flex flex-col items-center gap-2">
                             <div

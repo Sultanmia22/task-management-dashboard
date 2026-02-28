@@ -6,7 +6,7 @@ const PendingProject = () => {
     <div>
          <div className='flex flex-col gap-4'>
                                 <div className='text-gray-800 flex justify-between items-center'>
-                                    <h2 className=' font-bold'>Pending Product</h2>
+                                    <h2 className=' font-bold'>Pending Products</h2>
                                     <button className='flex items-center justify-center border text-center text-gray-800 w-8 h-8 rounded-full -rotate-45'><IoIosArrowRoundForward size={20} /></button>
                                 </div>
                         
@@ -17,7 +17,7 @@ const PendingProject = () => {
                                 <div className='text-green-700 flex items-center gap-2'>                        
                                     <p className='text-[11px] font-semibold'>On Discuss</p>
                                 </div>
-                </div>
+          </div>
     </div>
   )
 }

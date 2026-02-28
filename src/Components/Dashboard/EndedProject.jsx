@@ -7,7 +7,7 @@ const EndedProject = () => {
     <div>
          <div className='flex flex-col gap-4'>
                 <div className='text-gray-800 flex justify-between items-center'>
-                    <h2 className=' font-bold'>Ended Product</h2>
+                    <h2 className=' font-bold'>Ended Products</h2>
                     <button className='flex items-center justify-center border text-center text-gray-800 w-8 h-8 rounded-full -rotate-45'><IoIosArrowRoundForward size={20} /></button>
                 </div>
         
