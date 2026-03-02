@@ -14,8 +14,8 @@ const MainLayout = () => {
 
     {
       isOpenSlider && 
-      <div className='bg-white xl:hidden fixed top-0 left-0 inset-0 shadow w-4/5 max-w-[250px] md:max-w-[360px] min-h-screen'>
-        <div className='col-span-3 w-full'>
+      <div className='bg-white xl:hidden fixed top-0 left-0 inset-0 z-30 scroll-auto shadow w-4/5 max-w-[250px] md:max-w-[360px] '>
+        <div className='col-span-3 w-full min-h-screen'>
           <DashboardSidebar />
         </div>
       </div>
@@ -24,7 +24,7 @@ const MainLayout = () => {
       <div className="grid xl:grid-cols-12 min-h-screen gap-5 p-5">
 
         {/* Sidebar */}
-        <div className="hidden xl:block col-span-3 w-full min-h-screen">
+        <div className="hidden xl:block col-span-3 w-full min-h-screen ">
           <DashboardSidebar />
         </div>
 

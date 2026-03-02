@@ -6,9 +6,12 @@ const ContextProvider = ({children}) => {
 
     const [isOpenSlider,setIsOpenSlider] = useState(false)
 
+    const [user,setUser] = useState(null)
+
     const contextInfo = {
         setIsOpenSlider,
-        isOpenSlider
+        isOpenSlider,
+        setUser
     }
 
   return (

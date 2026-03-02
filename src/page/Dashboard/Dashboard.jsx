@@ -1,7 +1,4 @@
 import React, { use, useState } from 'react'
-import { HiMenuAlt3 } from 'react-icons/hi'
-import GlovalContext from '../../contexts/GlobalContext'
-import { FaBarsStaggered } from 'react-icons/fa6'
 import Products from '../../Components/Dashboard/Products'
 import EndedProject from '../../Components/Dashboard/EndedProject'
 import RunningProject from '../../Components/Dashboard/RunningProject'
@@ -12,28 +9,20 @@ import AllProducts from '../../Components/Dashboard/AllProducts'
 import Teamcollaboration from '../../Components/Dashboard/Teamcollaboration'
 import TimeTracker from '../../Components/Dashboard/TimeTracker'
 import ProductProgess from '../../Components/Dashboard/ProductProgess'
+import SearchBar from '../../Components/Dashboard/SearchBar'
+import { MdOutlineDomainDisabled, MdOutlineEmail } from 'react-icons/md'
+import { IoNotificationsOutline } from 'react-icons/io5'
+import Navbar from '../../Components/Dashboard/Navbar'
 
 const Dashboard = () => {
 
-  const { setIsOpenSlider, isOpenSlider } = use(GlovalContext)
-
-  const handleOpenSlider = () => {
-    setIsOpenSlider(!isOpenSlider)
-  }
 
   return (
     <div>
       <div className=" min-h-screen flex flex-col gap-5">
 
-        <div className='border-2 border-red-500 p-5 flex justify-between'>
-          <button>
-            Dahsboard
-          </button>
-
-          <button onClick={handleOpenSlider}>
-            <FaBarsStaggered />
-          </button>
-        </div>
+        {/* Navbar */}
+        <Navbar/>
 
         <div className='bg-gray-100 p-6 rounded-2xl'>
           <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-5 md:gap-0 mb-5'>

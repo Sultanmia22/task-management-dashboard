@@ -1,17 +1,23 @@
 import axios from 'axios'
-import React from 'react'
+import React, { use, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router'
 import { toast } from 'react-toastify'
+import GlovalContext from '../../contexts/GlobalContext'
 
 const Login = () => {
 
+    const {setUser} = use(GlovalContext)
+
     const navigate = useNavigate()
+
+    
 
 const {
     register,
     handleSubmit,
     watch,
+    setValue,
     formState: { errors },
 } = useForm()
 
@@ -26,6 +32,10 @@ const onsubmit = async (data) => {
             toast.success('Login Successfully!')
             navigate('/dashboard')
         }
+
+        setUser(response)
+
+        console.log(response)
     }
 
     catch(er){
@@ -40,10 +50,23 @@ const onsubmit = async (data) => {
                 <h2 className='tex-2xl font-bold sm:text-3xl md:text-4xl text-gray-600'>Welcome back </h2>
                 <p className='text-sm text-gray-600 sm:text-base md:text-lg'>Sign in to your account to continue</p>
             </div>
+
+           
+                <div className='flex items-center justify-center gap-2 mt-5'>
+                    <button 
+                     onClick={() =>  setValue('email', 'user1@example.com')}
+                     className='px-4 py-2 text-center border border-green-400 rounded-lg hover:shadow hover:shadow-green-200'>Demo Email</button>
+
+                    <button 
+                    onClick={() =>  setValue('password', 'password123')}
+                    className='px-4 py-2 text-center border border-green-400 rounded-lg hover:shadow hover:shadow-green-200'>Demo Password</button>
+                </div>
+            
             <form onSubmit={handleSubmit(onsubmit)} className='my-8 space-y-3'>
                 <div className='flex flex-col gap-2'>
                     <label className='block font-medium text-gray-700 text-sm sm:text-base md:text-lg'>Email</label>
                     <input 
+                   
                     {...register('email',{required: "Email is required"})}
                     type="email"
                     placeholder='example@email.com'
@@ -55,6 +78,7 @@ const onsubmit = async (data) => {
                 <div className='flex flex-col gap-2'>
                     <label className='block font-medium text-gray-700 text-sm sm:text-base md:text-lg'> Password </label>
                     <input 
+                    
                     {...register('password',{required: "Password is required"})}
                     type="password"
                     placeholder='Enter your password'

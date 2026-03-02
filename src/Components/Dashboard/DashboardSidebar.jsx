@@ -6,12 +6,11 @@ import { MdDashboard, MdOutlineTask } from 'react-icons/md'
 import { TbBrandGoogleAnalytics, TbLogout } from 'react-icons/tb'
 import { Link, NavLink } from 'react-router'
 import logoIcon from '../../assets/drooble.svg'
-import { BiAward } from 'react-icons/bi'
 import { FaAward } from 'react-icons/fa6'
 const DashboardSidebar = () => {
   return (
-    <div className='h-full'>
-      <div className=' bg-gray-100 p-5 min-h-screen rounded-2xl'>
+    <div className='h-full min-h-screen scroll-auto'>
+      <div className=' bg-gray-100 p-5 rounded-2xl'>
 
         <div className='flex items-center gap-2'>
           <img src={logoIcon} alt="" className='text-green-800' />
